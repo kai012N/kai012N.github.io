@@ -1,0 +1,145 @@
+/**
+ * Base
+ * Copyright 2020
+ * Author
+ * Licensed 
+ */
+/*------------------------------------*\
+    Content
+\*------------------------------------*/
+/**
+ * Content
+ * Core
+ * Global
+ * Utility
+ */
+
+
+/*------------------------------------*\
+    Core
+\*------------------------------------*/
+
+/* Default style */
+*{
+	box-sizing: border-box;
+	position: relative;
+}
+body{
+	font-family: Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: 300;
+	color: #40414f;
+	background-color: #fff;
+}
+a{
+	color: #40414f;
+	outline: none;
+}
+a:hover{
+	color: #6772E5;
+}
+/* Heading styles */
+h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6{
+	margin: 0;
+	padding: 0;
+}
+/* List style */
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*------------------------------------*\
+    Global
+\*------------------------------------*/
+
+/* Typography */
+h1,.h1,.heading-1{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 1.35;
+	letter-spacing: -0.02em;
+}
+h2,.h2,.heading-2{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 48px;
+	font-weight: 500;
+	line-height: 56px;
+	letter-spacing: -0.02em;
+}
+h3,.h3,.heading-3{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 34px;
+	font-weight: 400;
+	line-height: 48px;
+	letter-spacing: -0.02em;
+}
+h4,.h4,.heading-4{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: -0.02em;
+}
+h5,.h5,.heading-5{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0.02em;
+}
+h6,.h6,.heading-6{
+	font-family:  Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+}
+p,.para{
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0;
+	color: #686C71;
+}
+.para.para--sm{
+	font-size: 14px;
+	line-height: 24px;
+}
+
+
+/* background color */
+.bgc--default{background-color: #F3F4F5;}
+.bgc--primary{background-color: #3ecf8e;}
+.bgc--secondary{background-color: #6772e5;}
+
+.bgc--positive{background-color: #00BB91;}
+.bgc--negative{background-color: #f84545;}
+.bgc--alert{background-color: #f7ba36;}
+
+.bgc--black{background-color: #151730;}
+.bgc--dark-grey-1{background-color: #40414f;}
+.bgc--dark-grey-2{background-color: #686C71;}
+.bgc--light-grey-1{background-color: #B2BAC4;}
+.bgc--light-grey-2{background-color: #F3F4F5;}
+.bgc--white{background-color: #fbfbfb;}
+
+/* color */
+.color--default{color: #F3F4F5;}
+.color--primary{color: #3ecf8e;}
+.color--secondary{color: #6772e5;}
+
+.color--positive{color: #00BB91;}
+.color--negative{color: #f84545;}
+.color--alert{color: #f7ba36;}
+
+.color--black{color: #151730;}
+.color--dark-grey-1{color: #40414f;}
+.color--dark-grey-2{color: #686C71;}
+.color--light-grey-1{color: #B2BAC4;}
+.color--light-grey-2{color: #F3F4F5;}
+.color--white{color: #fbfbfb;}
+
