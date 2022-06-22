@@ -1,9 +1,17 @@
 $(document).ready(function(){
-    
+
+    $('.GoToTop').click(function(){
+        $('html,body').animate({
+          scrollTop: 0
+        },100);
+});
+
+
     $('.navbar-burger').on('click',function(){
         $('.navbar-end').slideToggle(200);
         $('.navbar-end').css('display', 'flex');
     })
+
     // ------------------------------------------ //
     // details //
     // ------------------------------------------ //
@@ -11,14 +19,16 @@ $(document).ready(function(){
     $('#details .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
             },
             769:{
-                items: 1
+                items: 1,
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
 
     });
@@ -26,18 +36,18 @@ $(document).ready(function(){
     // feature //
     // ------------------------------------------ //
 
-    // $('.features-btns').on('click', function (e) {
-    //     let focusItem = e.target.id;
-    //     let subs = focusItem.split('-');
-    //     subs[0] = '#box';
-    //     let focusBox = subs.join('-');
-    //     $(focusBox).show(300);
-    // });
-    // $('#features .btn-close').on('click', function (e) {
-    //     let focusBox = "#" + e.target.parentNode.id;
-    //     console.log(focusBox)
-    //     $(focusBox).hide(500);
-    // });
+    $('.features-btns').on('click', function (e) {
+        let focusItem = e.target.id;
+        let subs = focusItem.split('-');
+        subs[0] = '#box';
+        let focusBox = subs.join('-');
+        $(focusBox).show(300);
+    });
+    $('#features .btn-close').on('click', function (e) {
+        let focusBox = "#" + e.target.parentNode.id;
+        console.log(focusBox)
+        $(focusBox).hide(500);
+    });
     // tent
     $('#btn-tent').on('click',function(){
         $('#box-tent').show(300);
@@ -48,11 +58,16 @@ $(document).ready(function(){
     $('#box-tent .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
+            },
+            769:{
+                items: 1,
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
     });
     // cargobox
@@ -65,11 +80,16 @@ $(document).ready(function(){
     $('#box-cargobox .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
+            },
+            769:{
+                items: 1,
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
     });
     // mobile
@@ -82,11 +102,15 @@ $(document).ready(function(){
     $('#box-mobile .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
+            },
+            769:{
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
     });
     // soslight
@@ -99,11 +123,16 @@ $(document).ready(function(){
     $('#box-soslight .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
+            },
+            769:{
+                items: 1.1,
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
     });
 
@@ -113,14 +142,16 @@ $(document).ready(function(){
     $('#engineering .owl-carousel').owlCarousel({
         responsive:{
             0:{
-                items: 1.1
+                items: 1.1,
+                margin:24,
+
             },
             769:{
-                items: 1
+                items: 1,
+                margin:32,
             }
         },
         nav: true,
-        margin:32,
         loop: true,
 
     });
@@ -218,6 +249,9 @@ $(document).ready(function(){
 })
 
 if ($(window).width()  < 1201 ) {
+    $('.navbar-list a').on('click',function(){
+        $('.navbar-end').hide();
+    })
     $(".js-FadeInLeft").removeClass('js-FadeInLeft');
     $(".js-FadeInLeft-slow").removeClass('js-FadeInLeft-slow');
     $(".1200-FadeInBottom").addClass('js-FadeInBottom');

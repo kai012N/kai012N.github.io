@@ -6,6 +6,7 @@
 *{
 	box-sizing: border-box;
 	position: relative;
+	scroll-behavior: smooth;
 }
 body{
 	font-family: Helvetica,Arial,"Noto Sans TC","Helvetica Neue","微軟正黑體","Microsoft JhengHei", sans-serif;
@@ -22,7 +23,7 @@ a{
 }
 
 a:hover{
-	color: #6772E5;
+	color: #edef00;
 }
 /* Heading styles */
 h1,h2,h3,h4,h5,h6,p,.h1,.h2,.h3,.h4,.h5,.h6{
@@ -264,6 +265,37 @@ h6{
 	line-height: 32px;
 	height: 32px;
 	padding: 0 16px;
+}
+/* GoToTop btn */
+.GoToTop{
+	position: fixed;
+	right: 24px;
+	bottom: 40px;
+	border: 2px solid #fff;
+	background-color: transparent;
+	backdrop-filter: blur(4px);
+	z-index: 500;
+	width: 36px;
+	height: 42px;
+	border-radius: 8px;
+	padding: 0;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		display: flex;
+		align-self: auto;
+	}
+	@media(max-width:1200px){
+		display: none;
+	}
+}
+.navbar-list .btn.GoToTop{
+	@media(max-width:1200px){
+		display: block;
+		padding: 0;
+		backdrop-filter: blur(0);
+	}
 }
 /* logo */
 .logo{

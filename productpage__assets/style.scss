@@ -344,6 +344,7 @@ $white: #fff;
                 }
             } 
         }
+
     }
     @media (max-width: 576px) {
 
@@ -360,10 +361,13 @@ $white: #fff;
             } 
         }
         .btn-MoreInfo{
-            height: 80px;
-            line-height: 80px;
+            height: 60px;
+            line-height: 60px;
             border-radius: 16px;
+            margin-top: 20px;
+
         }
+
     }
     @media (max-width: 400px) {
 
@@ -391,12 +395,15 @@ $white: #fff;
 	position: relative;
 	overflow: hidden;
     &-bg{
+        img{
+            @extend %img-fit;
+
+        }
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        object-fit: contain;
         display: flex;
         align-items: center;
     }
@@ -444,12 +451,12 @@ $white: #fff;
 
             .h2-xxl{
                 font-family: Impact;
-                font-size: 14vmin;
+                font-size: 148px;
                 font-weight: 900;
                 line-height: 150px;
                 color: #fff;
                 text-transform: uppercase;
-                letter-spacing: 0.005em;
+                letter-spacing: 0.01em;
 
                 &:last-child{
 
@@ -559,10 +566,12 @@ $white: #fff;
                     &.h2-banner-top{
                         font-size: 48px;
                         line-height: 56px;
+                        letter-spacing: 0.035em;
                     }
                     &.h2-banner-bottom{
                         font-size: 72px;
                         line-height: 72px;
+                        letter-spacing: 0.035em;
                     }
                 }
             }
@@ -586,8 +595,8 @@ $white: #fff;
                         line-height: 32px;
                     }
                     &.h2-banner-bottom{
-                        font-size: 44px;
-                        line-height: 44px;
+                        font-size: 40px;
+                        line-height: 40px;
                     }
                 }
             }
@@ -829,6 +838,7 @@ $white: #fff;
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(8px);
+
             h2{
                 display: none;
             }
@@ -836,29 +846,118 @@ $white: #fff;
                 width: 56px;
                 height: 56px;
             }
-        }
-        .btn-tent{
-            right: calc(50% + 140px);
-            bottom: calc(50% + 240px);
-            z-index: 1;
-        }
-        .btn-cargobox{
-            left:  calc(50% + 200px);
-            bottom: calc(50% + 240px);
-            z-index: 1;
-        }
-        .btn-mobile{
-            right: calc(50% + 140px);
-            top: calc(50% - 12px);
-            z-index: 1;
-        }
-        .btn-soslight{
-            left: calc(50% + 200px);
-            top: calc(50% - 12px);
-            z-index: 1;
-        }
+            &.btn-tent{
+                right: calc(50% + 140px);
+                bottom: calc(50% + 240px);
+                z-index: 1;
+            }
+            &.btn-cargobox{
+                left:  calc(50% + 200px);
+                bottom: calc(50% + 240px);
+                z-index: 1;
+            }
+            &.btn-mobile{
+                right: calc(50% + 140px);
+                top: calc(50% - 12px);
+                z-index: 1;
+            }
+            &.btn-soslight{
+                left: calc(50% + 200px);
+                top: calc(50% - 12px);
+                z-index: 1;
+            }
 
-
+        }        
+    }
+    @media (min-width: 1024px) {
+        &-btns{
+            .btn{
+                &.btn-tent{
+                    right: calc(50% + 140px);
+                    bottom: calc(50% + 240px);
+                    z-index: 1;
+                    animation-name: bumping-2;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in;
+                    @keyframes bumping-2{
+                        0%{
+                            bottom: calc(50% + 240px);
+                        }
+                        50%{
+                            bottom: calc(50% + 252px);
+                        }
+                        100%{
+                            bottom: calc(50% + 240px);
+                        }
+                    }  
+    
+                }
+                &.btn-cargobox{
+                    left:  calc(50% + 200px);
+                    bottom: calc(50% + 240px);
+                    z-index: 1;
+                    animation-name: bumping-3;
+                    animation-duration: 2s;
+                    animation-delay: 0.3s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in;
+                    @keyframes bumping-3{
+                        0%{
+                            bottom: calc(50% + 240px);
+                        }
+                        50%{
+                            bottom: calc(50% + 252px);
+                        }
+                        100%{
+                            bottom: calc(50% + 240px);
+                        }
+                    } 
+                }
+                &.btn-mobile{
+                    right: calc(50% + 140px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                    animation-name: bumping-4;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in;
+                    @keyframes bumping-4{
+                        0%{
+                            top: calc(50% - 12px);
+                        }
+                        50%{
+                            top: calc(50% - 2px);
+                        }
+                        100%{
+                            top: calc(50% - 12px);
+                        }
+                    } 
+                }
+                &.btn-soslight{
+                    left: calc(50% + 200px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                    animation-name: bumping-5;
+                    animation-duration: 2s;
+                    animation-delay: 0.5s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in;
+                    @keyframes bumping-5{
+                        0%{
+                            top: calc(50% - 12px);
+                        }
+                        50%{
+                            top: calc(50% - 2px);
+                        }
+                        100%{
+                            top: calc(50% - 12px);
+                        }
+                    } 
+                }
+    
+            }        
+        }
     }
     .row-6{
         height: 50%;
@@ -872,6 +971,7 @@ $white: #fff;
                 height: 100%;
                 width: 100%;
                 z-index: 1;
+                display: none;
                 .card-bg{
                     position: absolute;
                     padding-left: 12px;
@@ -957,26 +1057,26 @@ $white: #fff;
                     width: 44px;
                     height: 44px;
                 }
-            }
-            .btn-tent{
-                right: calc(50% + 60px);
-                bottom: calc(50% + 160px);
-                z-index: 1;
-            }
-            .btn-cargobox{
-                left:  calc(50% + 100px);
-                bottom: calc(50% + 160px);
-                z-index: 1;
-            }
-            .btn-mobile{
-                right: calc(50% + 60px);
-                top: calc(50% - 12px);
-                z-index: 1;
-            }
-            .btn-soslight{
-                left: calc(50% + 100px);
-                top: calc(50% - 12px);
-                z-index: 1;
+                &.btn-tent{
+                    right: calc(50% + 60px);
+                    bottom: calc(50% + 160px);
+                    z-index: 1;
+                }
+                &.btn-cargobox{
+                    left:  calc(50% + 100px);
+                    bottom: calc(50% + 160px);
+                    z-index: 1;
+                }
+                &.btn-mobile{
+                    right: calc(50% + 60px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                }
+                &.btn-soslight{
+                    left: calc(50% + 100px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                }
             }
         }
     }
@@ -984,7 +1084,7 @@ $white: #fff;
         // bg
         &-bg{
             .title{
-            bottom: 20%;
+            bottom: 15%;
             }
             .h2-xxl{
                 font-size: 48px;    
@@ -992,26 +1092,29 @@ $white: #fff;
         }
         // btns
         &-btns{
-            .btn-tent{
-                right: calc(50% + 20px);
-                bottom: calc(50% + 160px);
-                z-index: 1;
+            .btn{
+                &.btn-tent{
+                    right: calc(50% + 20px);
+                    bottom: calc(50% + 160px);
+                    z-index: 1;
+                }
+                &.btn-cargobox{
+                    left:  calc(50% + 20px);
+                    bottom: calc(50% + 160px);
+                    z-index: 1;
+                }
+                &.btn-mobile{
+                    right: calc(50% + 20px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                }
+                &.btn-soslight{
+                    left: calc(50% + 20px);
+                    top: calc(50% - 12px);
+                    z-index: 1;
+                }
             }
-            .btn-cargobox{
-                left:  calc(50% + 20px);
-                bottom: calc(50% + 160px);
-                z-index: 1;
-            }
-            .btn-mobile{
-                right: calc(50% + 20px);
-                top: calc(50% - 12px);
-                z-index: 1;
-            }
-            .btn-soslight{
-                left: calc(50% + 20px);
-                top: calc(50% - 12px);
-                z-index: 1;
-            }
+
         }
         // content
 
@@ -1021,7 +1124,7 @@ $white: #fff;
         // bg
         &-bg{
             .title{
-            bottom: 15%;
+            bottom: 12%;
             right: 10%;
             }
             .h2-xxl{
@@ -1040,27 +1143,28 @@ $white: #fff;
                 h2{
                     font-size: 16px;
                 }
+                &.btn-tent{
+                    left: 50%;
+                    top: -100%;
+                    z-index: 1;
+                }
+                &.btn-cargobox{
+                    left: 50%;
+                    top: -50%;
+                    z-index: 1;
+                }
+                &.btn-mobile{
+                    left: 50%;
+                    top: 0;
+                    z-index: 1;
+                }
+                &.btn-soslight{
+                    left: 50%;
+                    top: 50%;
+                    z-index: 1;
+                }
             }
-            .btn-tent{
-                top: -100%;
-                bottom: 0;
-                z-index: 1;
-            }
-            .btn-cargobox{
-                top: -50%;
-                bottom: 0;
-                z-index: 1;
-            }
-            .btn-mobile{
-                top: 0;
-                bottom: 0;
-                z-index: 1;
-            }
-            .btn-soslight{
-                top: 50%;
-                bottom: 0;
-                z-index: 1;
-            }
+
         }
 
 

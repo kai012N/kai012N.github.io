@@ -7,6 +7,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,7 +26,7 @@ a {
 }
 
 a:hover {
-  color: #6772E5;
+  color: #edef00;
 }
 
 /* Heading styles */
@@ -310,6 +311,49 @@ h6 {
   line-height: 32px;
   height: 32px;
   padding: 0 16px;
+}
+
+/* GoToTop btn */
+.GoToTop {
+  position: fixed;
+  right: 24px;
+  bottom: 40px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 500;
+  width: 36px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.GoToTop img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: auto;
+      align-self: auto;
+}
+
+@media (max-width: 1200px) {
+  .GoToTop {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-list .btn.GoToTop {
+    display: block;
+    padding: 0;
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
 }
 
 /* logo */

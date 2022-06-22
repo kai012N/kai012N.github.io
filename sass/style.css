@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.banner-pic-top img, .banner-pic-down img, .features .row-6 .col-6 .card .card-bg .owl-carousel img, .team-content-mentor .protrait img, .team-content-designer .protrait img, .team-content-cooperator .protrait-r img {
+.banner-bg img, .banner-pic-top img, .banner-pic-down img, .features .row-6 .col-6 .card .card-bg .owl-carousel img, .team-content-mentor .protrait img, .team-content-designer .protrait img, .team-content-cooperator .protrait-r img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
@@ -441,9 +441,10 @@
     line-height: 60px;
   }
   .jumbotron .btn-MoreInfo {
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
     border-radius: 16px;
+    margin-top: 20px;
   }
 }
 
@@ -471,8 +472,6 @@
   right: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -521,12 +520,12 @@
 
 .banner-content .mid .h2-xxl {
   font-family: Impact;
-  font-size: 14vmin;
+  font-size: 148px;
   font-weight: 900;
   line-height: 150px;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.01em;
 }
 
 .banner-content .mid .h2-xxl:last-child {
@@ -644,10 +643,12 @@
   .banner-content .mid .h2-xxl.h2-banner-top {
     font-size: 48px;
     line-height: 56px;
+    letter-spacing: 0.035em;
   }
   .banner-content .mid .h2-xxl.h2-banner-bottom {
     font-size: 72px;
     line-height: 72px;
+    letter-spacing: 0.035em;
   }
 }
 
@@ -668,8 +669,8 @@
     line-height: 32px;
   }
   .banner-content .mid .h2-xxl.h2-banner-bottom {
-    font-size: 44px;
-    line-height: 44px;
+    font-size: 40px;
+    line-height: 40px;
   }
 }
 
@@ -938,28 +939,175 @@
   height: 56px;
 }
 
-.features-btns .btn-tent {
+.features-btns .btn.btn-tent {
   right: calc(50% + 140px);
   bottom: calc(50% + 240px);
   z-index: 1;
 }
 
-.features-btns .btn-cargobox {
+.features-btns .btn.btn-cargobox {
   left: calc(50% + 200px);
   bottom: calc(50% + 240px);
   z-index: 1;
 }
 
-.features-btns .btn-mobile {
+.features-btns .btn.btn-mobile {
   right: calc(50% + 140px);
   top: calc(50% - 12px);
   z-index: 1;
 }
 
-.features-btns .btn-soslight {
+.features-btns .btn.btn-soslight {
   left: calc(50% + 200px);
   top: calc(50% - 12px);
   z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .features-btns .btn.btn-tent {
+    right: calc(50% + 140px);
+    bottom: calc(50% + 240px);
+    z-index: 1;
+    -webkit-animation-name: bumping-2;
+            animation-name: bumping-2;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  @-webkit-keyframes bumping-2 {
+    0% {
+      bottom: calc(50% + 240px);
+    }
+    50% {
+      bottom: calc(50% + 252px);
+    }
+    100% {
+      bottom: calc(50% + 240px);
+    }
+  }
+  @keyframes bumping-2 {
+    0% {
+      bottom: calc(50% + 240px);
+    }
+    50% {
+      bottom: calc(50% + 252px);
+    }
+    100% {
+      bottom: calc(50% + 240px);
+    }
+  }
+  .features-btns .btn.btn-cargobox {
+    left: calc(50% + 200px);
+    bottom: calc(50% + 240px);
+    z-index: 1;
+    -webkit-animation-name: bumping-3;
+            animation-name: bumping-3;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  @-webkit-keyframes bumping-3 {
+    0% {
+      bottom: calc(50% + 240px);
+    }
+    50% {
+      bottom: calc(50% + 252px);
+    }
+    100% {
+      bottom: calc(50% + 240px);
+    }
+  }
+  @keyframes bumping-3 {
+    0% {
+      bottom: calc(50% + 240px);
+    }
+    50% {
+      bottom: calc(50% + 252px);
+    }
+    100% {
+      bottom: calc(50% + 240px);
+    }
+  }
+  .features-btns .btn.btn-mobile {
+    right: calc(50% + 140px);
+    top: calc(50% - 12px);
+    z-index: 1;
+    -webkit-animation-name: bumping-4;
+            animation-name: bumping-4;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  @-webkit-keyframes bumping-4 {
+    0% {
+      top: calc(50% - 12px);
+    }
+    50% {
+      top: calc(50% - 2px);
+    }
+    100% {
+      top: calc(50% - 12px);
+    }
+  }
+  @keyframes bumping-4 {
+    0% {
+      top: calc(50% - 12px);
+    }
+    50% {
+      top: calc(50% - 2px);
+    }
+    100% {
+      top: calc(50% - 12px);
+    }
+  }
+  .features-btns .btn.btn-soslight {
+    left: calc(50% + 200px);
+    top: calc(50% - 12px);
+    z-index: 1;
+    -webkit-animation-name: bumping-5;
+            animation-name: bumping-5;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  @-webkit-keyframes bumping-5 {
+    0% {
+      top: calc(50% - 12px);
+    }
+    50% {
+      top: calc(50% - 2px);
+    }
+    100% {
+      top: calc(50% - 12px);
+    }
+  }
+  @keyframes bumping-5 {
+    0% {
+      top: calc(50% - 12px);
+    }
+    50% {
+      top: calc(50% - 2px);
+    }
+    100% {
+      top: calc(50% - 12px);
+    }
+  }
 }
 
 .features .row-6 {
@@ -977,6 +1125,7 @@
   height: 100%;
   width: 100%;
   z-index: 1;
+  display: none;
 }
 
 .features .row-6 .col-6 .card .card-bg {
@@ -1064,22 +1213,22 @@
     width: 44px;
     height: 44px;
   }
-  .features-btns .btn-tent {
+  .features-btns .btn.btn-tent {
     right: calc(50% + 60px);
     bottom: calc(50% + 160px);
     z-index: 1;
   }
-  .features-btns .btn-cargobox {
+  .features-btns .btn.btn-cargobox {
     left: calc(50% + 100px);
     bottom: calc(50% + 160px);
     z-index: 1;
   }
-  .features-btns .btn-mobile {
+  .features-btns .btn.btn-mobile {
     right: calc(50% + 60px);
     top: calc(50% - 12px);
     z-index: 1;
   }
-  .features-btns .btn-soslight {
+  .features-btns .btn.btn-soslight {
     left: calc(50% + 100px);
     top: calc(50% - 12px);
     z-index: 1;
@@ -1088,27 +1237,27 @@
 
 @media (max-width: 768px) {
   .features-bg .title {
-    bottom: 20%;
+    bottom: 15%;
   }
   .features-bg .h2-xxl {
     font-size: 48px;
   }
-  .features-btns .btn-tent {
+  .features-btns .btn.btn-tent {
     right: calc(50% + 20px);
     bottom: calc(50% + 160px);
     z-index: 1;
   }
-  .features-btns .btn-cargobox {
+  .features-btns .btn.btn-cargobox {
     left: calc(50% + 20px);
     bottom: calc(50% + 160px);
     z-index: 1;
   }
-  .features-btns .btn-mobile {
+  .features-btns .btn.btn-mobile {
     right: calc(50% + 20px);
     top: calc(50% - 12px);
     z-index: 1;
   }
-  .features-btns .btn-soslight {
+  .features-btns .btn.btn-soslight {
     left: calc(50% + 20px);
     top: calc(50% - 12px);
     z-index: 1;
@@ -1117,7 +1266,7 @@
 
 @media (max-width: 576px) {
   .features-bg .title {
-    bottom: 15%;
+    bottom: 12%;
     right: 10%;
   }
   .features-bg .h2-xxl {
@@ -1135,24 +1284,24 @@
   .features-btns .btn h2 {
     font-size: 16px;
   }
-  .features-btns .btn-tent {
+  .features-btns .btn.btn-tent {
+    left: 50%;
     top: -100%;
-    bottom: 0;
     z-index: 1;
   }
-  .features-btns .btn-cargobox {
+  .features-btns .btn.btn-cargobox {
+    left: 50%;
     top: -50%;
-    bottom: 0;
     z-index: 1;
   }
-  .features-btns .btn-mobile {
+  .features-btns .btn.btn-mobile {
+    left: 50%;
     top: 0;
-    bottom: 0;
     z-index: 1;
   }
-  .features-btns .btn-soslight {
+  .features-btns .btn.btn-soslight {
+    left: 50%;
     top: 50%;
-    bottom: 0;
     z-index: 1;
   }
 }
